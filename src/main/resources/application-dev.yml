@@ -1,0 +1,25 @@
+server:
+  port: 8075
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  servlet:
+    multipart:
+      enabled: true
+  sql:
+    init:
+      platform: postgresql
+
+jwt:
+  secret: mysecretword
+  expiration: 900000
+  refreshExpiration: 1209600000
+
+s3:
+  access-key: key
+  secret-key: key
+  bucket-prefix: file-storage-api-
